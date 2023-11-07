@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FastBoard - Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css" media="all">
+</head>
+
+<body>
+
+  <div class="api-container">
+    <div class="tab-header">
+      <a href="#users">Users</a>
+      <a href="#games">Games</a>
+      <a href="#categories">Categories</a>
+      <a href="#leaderboards">Leaderboards</a>
+      <a href="#levels">Levels</a>
+      <a href="#runs">Runs</a>
+      <a href="#series">Series</a>
+      <a href="#variables">Variables</a>
+    </div>
+
+    <div class="api-inner">
+
+      <!-- Users tab -->
+      <div class="tab" id="users">
+        <h2>Get Users</h2>
+        <form action="/get-data/users" method="POST" onsubmit="fetchAndDisplayApi(event, 'users');">
+          <input type="text" name="inputText" id="inputText" placeholder="Enter text">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="usersResponse"></div>
+      </div>
+
+      <!-- Games tab -->
+      <div class="tab" id="games">
+        <h2>Get Games</h2>
+        <form action="/get-data/games" method="POST" onsubmit="fetchAndDisplayApi(event, 'games');">
+          <input type="text" name="inputText" placeholder="Enter text">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="gamesResponse"></div>
+      </div>
+
+      <!-- Categories tab -->
+      <div class="tab" id="categories">
+        <h2>Get Categories</h2>
+        <form action="/get-data/categories" method="GET">
+          <input type="text" name="inputText" placeholder="Enter text">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="categoriesResponse"></div>
+      </div>
+
+      <!-- Leaderboards tab -->
+      <div class="tab" id="leaderboards">
+        <h2>Get Leaderboards BROKEN</h2>
+        <form action="/get-data/leaderboards" method="GET">
+          <input type="text" name="inputText" placeholder="Enter text">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="leaderboardsResponse"></div>
+      </div>
+
+      <!-- Levels tab -->
+      <div class="tab" id="levels">
+        <h2>Get Levels</h2>
+        <form action="/get-data/levels" method="GET">
+          <input type="text" name="inputText" placeholder="Enter text">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="levelsResponse"></div>
+      </div>
+
+      <!-- Runs tab -->
+      <div class="tab" id="runs">
+        <h2>Get Runs</h2>
+        <form action="/get-data/runs" method="GET">
+          <input type="text" name="inputText" placeholder="Enter text">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="runsResponse"></div>
+      </div>
+
+      <!-- Series tab -->
+      <div class="tab" id="series">
+        <h2>Get Series</h2>
+        <form action="/get-data/series" method="GET">
+          <input type="text" name="inputText" placeholder="Enter text">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="seriesResponse"></div>
+      </div>
+
+      <!-- Variables tab -->
+      <div class="tab" id="variables">
+        <h2>Get Variables</h2>
+        <form action="/get-data/variables" method="GET">
+          <input type="text" name="inputText" placeholder="Enter text">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="variablesResponse"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="script.js" defer async></script>
+</body>
+
+</html>
