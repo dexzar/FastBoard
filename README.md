@@ -1,2 +1,2 @@
 # FastBoard
-# Intial commit - Test
+nodemon ./index.js localhost 3000
